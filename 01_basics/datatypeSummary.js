@@ -34,4 +34,27 @@ const myFunction = function(){
 
 console.log(typeof anotherId);
 
-// https://262.ecma-international.org/5.1/#sec-
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(primitive), Heap(non_primitive)
+
+let myTeamName="pirates"
+let anotherName = myTeamName // allocating the copy here 
+anotherName="Vinayak"
+console.log(anotherName);
+console.log(myTeamName);// not changes because it allocates the copy
+
+let userOne = {
+    email :"user@google.com",
+    upi : "user.ybl"
+}
+let userTwo = userOne
+userTwo.email = "vinayak@gmail.com"
+console.log(userOne.email); //email changed here too because it changes the orignal value
+console.log(userTwo.email);
+
+
+
